@@ -27,3 +27,17 @@ MOMENTS = ("matricula", "semestre_1", "semestre_2")
 
 # UCI Machine Learning Repository, id del dataset
 UCI_ID = 697
+
+# Tipos de variables (Fase 2). Nombres en minúscula para comparar sin importar
+# mayúsculas ni espacios; las demás predictoras se tratan como numéricas.
+CATEGORICAL_VARS = {
+    "marital status", "application mode", "course", "daytime/evening attendance",
+    "previous qualification", "nacionality", "mother's qualification",
+    "father's qualification", "mother's occupation", "father's occupation",
+    "displaced", "educational special needs", "debtor", "tuition fees up to date",
+    "gender", "scholarship holder", "international",
+}
+RARE_MIN_COUNT = 30   # categorías con menos registros se agrupan en "Otras" para chi cuadrado
+ALPHA = 0.05          # nivel de significancia
+HIGH_CORR = 0.80      # |rho de Spearman| a partir del cual se reporta redundancia
+REPORTS = ROOT / "reports"
