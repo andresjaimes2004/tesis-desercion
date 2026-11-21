@@ -1,0 +1,37 @@
+﻿variable,tipo,momento,prueba,estadistico,gl,p_valor,efecto,medida_efecto,categorias_usadas,pct_esperadas_menor_5,direccion,r_rango_biserial,mediana_deserta,mediana_no_deserta,p_ajustado_bh,significativa
+Curricular units 2nd sem (approved),numérica,semestre_2,U de Mann-Whitney,618320.0,,0.0,0.7102030036583169,r rango-biserial (valor absoluto),,,menor en deserción,-0.7102030036583169,0.0,6.0,0.0,True
+Curricular units 1st sem (approved),numérica,semestre_1,U de Mann-Whitney,774792.0,,5.900209835742179e-265,0.6368670035102125,r rango-biserial (valor absoluto),,,menor en deserción,-0.6368670035102125,2.0,6.0,1.0620377704335924e-263,True
+Curricular units 2nd sem (grade),numérica,semestre_2,U de Mann-Whitney,793374.0,,3.439174272149934e-252,0.6281579082423558,r rango-biserial (valor absoluto),,,menor en deserción,-0.6281579082423558,0.0,12.75,4.1270091265799206e-251,True
+Curricular units 1st sem (grade),numérica,semestre_1,U de Mann-Whitney,968536.5,,1.8162835682750062e-190,0.5460619605587937,r rango-biserial (valor absoluto),,,menor en deserción,-0.5460619605587937,10.92857143,12.71428571,1.6346552114475056e-189,True
+Tuition fees up to date,binaria,matricula,chi cuadrado,814.7641356031282,1.0,3.327427731275458e-179,0.4291492845262439,V de Cramér,2.0,0.0,,,,,2.39574796651833e-178,True
+Age at enrollment,numérica,matricula,U de Mann-Whitney,2863265.5,,2.0553212863984823e-77,0.34196814210888804,r rango-biserial (valor absoluto),,,mayor en deserción,0.34196814210888804,23.0,19.0,1.2331927718390896e-76,True
+Application mode,categórica,matricula,chi cuadrado,390.16315370709714,12.0,4.5736662090656756e-76,0.29697204346411704,V de Cramér,13.0,0.0,,,,,2.352171193233776e-75,True
+Course,categórica,matricula,chi cuadrado,298.26514216123746,16.0,5.832502227810086e-54,0.25965320720362695,V de Cramér,17.0,2.941176470588235,,,,,2.3330008911240345e-53,True
+Scholarship holder,binaria,matricula,chi cuadrado,266.318360107245,1.0,7.199903789531474e-60,0.24535391647177573,V de Cramér,2.0,0.0,,,,,3.2399567052891634e-59,True
+Debtor,binaria,matricula,chi cuadrado,232.825009318936,1.0,1.4430159800207284e-52,0.22940731153092372,V de Cramér,2.0,0.0,,,,,5.194857528074622e-52,True
+Curricular units 2nd sem (enrolled),numérica,semestre_2,U de Mann-Whitney,1661836.0,,5.532284937404151e-36,0.2211232351978305,r rango-biserial (valor absoluto),,,menor en deserción,-0.2211232351978305,6.0,6.0,1.5320173672811495e-35,True
+Curricular units 1st sem (enrolled),numérica,semestre_1,U de Mann-Whitney,1681882.5,,4.650238072463861e-33,0.21172775148848333,r rango-biserial (valor absoluto),,,menor en deserción,-0.21172775148848333,6.0,6.0,1.19577550434785e-32,True
+Previous qualification,categórica,matricula,chi cuadrado,186.55172704823352,7.0,8.041261712640809e-37,0.2053487567544427,V de Cramér,8.0,0.0,,,,,2.4123785137922424e-36,True
+Gender,binaria,matricula,chi cuadrado,184.0777974910213,1.0,6.23915001285147e-42,0.20398261053413663,V de Cramér,2.0,0.0,,,,,2.041903640569572e-41,True
+Mother's qualification,categórica,matricula,chi cuadrado,172.24407226635702,9.0,2.1024800677427163e-32,0.19731703605729317,V de Cramér,10.0,0.0,,,,,5.045952162582519e-32,True
+Mother's occupation,categórica,matricula,chi cuadrado,166.19842248230168,11.0,7.139553461012015e-30,0.1938232580294283,V de Cramér,12.0,0.0,,,,,1.6063995287277034e-29,True
+Father's qualification,categórica,matricula,chi cuadrado,148.4083354148722,9.0,1.8840055597213353e-27,0.1831561845334121,V de Cramér,10.0,0.0,,,,,3.989658832351063e-27,True
+Father's occupation,categórica,matricula,chi cuadrado,133.22229243692234,12.0,1.390064697859809e-22,0.17353252742193717,V de Cramér,13.0,0.0,,,,,2.780129395719618e-22,True
+Curricular units 2nd sem (evaluations),numérica,semestre_2,U de Mann-Whitney,1821273.5,,2.229556429945982e-15,0.14639735118271358,r rango-biserial (valor absoluto),,,menor en deserción,-0.14639735118271358,7.0,8.0,4.224422709371334e-15,True
+Admission grade,numérica,matricula,U de Mann-Whitney,1873604.5,,5.541954729366567e-11,0.12187062292621753,r rango-biserial (valor absoluto),,,menor en deserción,-0.12187062292621753,123.6,126.7,9.068653193508928e-11,True
+Marital Status,categórica,matricula,chi cuadrado,57.41638792485341,3.0,2.0942250108380984e-12,0.11392272761517568,V de Cramér,4.0,0.0,,,,,3.590100018579597e-12,True
+Displaced,binaria,matricula,chi cuadrado,50.87063149054414,1.0,9.86587763040649e-13,0.10723239484077353,V de Cramér,2.0,0.0,,,,,1.775857973473168e-12,True
+Previous qualification (grade),numérica,matricula,U de Mann-Whitney,1923393.5,,1.1107369675890318e-07,0.0985352906535173,r rango-biserial (valor absoluto),,,menor en deserción,-0.0985352906535173,133.1,133.1,1.5994612333282057e-07,True
+Application order,numérica,matricula,U de Mann-Whitney,1953564.0,,3.490345118305815e-08,0.08439484512672413,r rango-biserial (valor absoluto),,,menor en deserción,-0.08439484512672413,1.0,1.0,5.4631488808264936e-08,True
+Daytime/evening attendance,binaria,matricula,chi cuadrado,28.667750976984586,1.0,8.59227514692058e-08,0.08049877148123116,V de Cramér,2.0,0.0,,,,,1.2888412720380872e-07,True
+GDP,numérica,matricula,U de Mann-Whitney,1985117.0,,0.0001670291709907271,0.06960644328694998,r rango-biserial (valor absoluto),,,menor en deserción,-0.06960644328694998,0.32,0.79,0.000214751791273792,True
+Curricular units 1st sem (evaluations),numérica,semestre_1,U de Mann-Whitney,1990033.0,,0.00026608986019817995,0.0673023903143537,r rango-biserial (valor absoluto),,,menor en deserción,-0.0673023903143537,8.0,8.0,0.00033031844714256816,True
+Curricular units 2nd sem (without evaluations),numérica,semestre_2,U de Mann-Whitney,2207249.5,,1.1694444292552437e-05,0.034503615080673455,r rango-biserial (valor absoluto),,,mayor en deserción,0.034503615080673455,0.0,0.0,1.6192307481995682e-05,True
+Curricular units 1st sem (without evaluations),numérica,semestre_1,U de Mann-Whitney,2200132.0,,0.00010305337238790002,0.03116775319449494,r rango-biserial (valor absoluto),,,mayor en deserción,0.03116775319449494,0.0,0.0,0.00013740449651720004,True
+Inflation rate,numérica,matricula,U de Mann-Whitney,2194237.0,,0.12337154012934262,0.028404858102254238,r rango-biserial (valor absoluto),,,mayor en deserción,0.028404858102254238,1.4,1.4,0.14804584815521116,False
+Nacionality,categórica,matricula,chi cuadrado,2.0745811692806533,2.0,0.3544136360188229,0.021654973500880498,V de Cramér,3.0,0.0,,,,,0.3987153405211758,False
+Curricular units 2nd sem (credited),numérica,semestre_2,U de Mann-Whitney,2101228.5,,0.14749209906020075,0.015186783659690062,r rango-biserial (valor absoluto),,,menor en deserción,-0.015186783659690062,0.0,0.0,0.171281147295717,False
+Unemployment rate,numérica,matricula,U de Mann-Whitney,2158648.0,,0.5260396474033536,0.011724845644620396,r rango-biserial (valor absoluto),,,mayor en deserción,0.011724845644620396,11.1,11.1,0.541069351614878,False
+International,binaria,matricula,chi cuadrado,0.4747945180503468,1.0,0.49078969568460307,0.010359654908854278,V de Cramér,2.0,0.0,,,,,0.5196596777836974,False
+Curricular units 1st sem (credited),numérica,semestre_1,U de Mann-Whitney,2115068.5,,0.42390705816240615,0.008700190262470375,r rango-biserial (valor absoluto),,,menor en deserción,-0.008700190262470375,0.0,0.0,0.46244406344989764,False
+Educational special needs,binaria,matricula,chi cuadrado,0.03482295723872167,1.0,0.8519671291409596,0.002805596852315367,V de Cramér,2.0,0.0,,,,,0.8519671291409596,False

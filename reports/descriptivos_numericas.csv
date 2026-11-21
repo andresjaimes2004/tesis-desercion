@@ -1,0 +1,58 @@
+﻿,,0,1
+Application order,mean,1.79,1.59
+Application order,median,1.0,1.0
+Application order,std,1.35,1.22
+Previous qualification (grade),mean,133.32,131.11
+Previous qualification (grade),median,133.1,133.1
+Previous qualification (grade),std,13.28,12.87
+Admission grade,mean,127.93,124.96
+Admission grade,median,126.7,123.6
+Admission grade,std,14.07,15.13
+Age at enrollment,mean,21.94,26.07
+Age at enrollment,median,19.0,23.0
+Age at enrollment,std,6.6,8.7
+Curricular units 1st sem (credited),mean,0.76,0.61
+Curricular units 1st sem (credited),median,0.0,0.0
+Curricular units 1st sem (credited),std,2.47,2.1
+Curricular units 1st sem (enrolled),mean,6.48,5.82
+Curricular units 1st sem (enrolled),median,6.0,6.0
+Curricular units 1st sem (enrolled),std,2.52,2.33
+Curricular units 1st sem (evaluations),mean,8.56,7.75
+Curricular units 1st sem (evaluations),median,8.0,8.0
+Curricular units 1st sem (evaluations),std,3.75,4.92
+Curricular units 1st sem (approved),mean,5.73,2.55
+Curricular units 1st sem (approved),median,6.0,2.0
+Curricular units 1st sem (approved),std,2.65,2.86
+Curricular units 1st sem (grade),mean,12.24,7.26
+Curricular units 1st sem (grade),median,12.71,10.93
+Curricular units 1st sem (grade),std,3.06,6.03
+Curricular units 1st sem (without evaluations),mean,0.11,0.19
+Curricular units 1st sem (without evaluations),median,0.0,0.0
+Curricular units 1st sem (without evaluations),std,0.63,0.79
+Curricular units 2nd sem (credited),mean,0.59,0.45
+Curricular units 2nd sem (credited),median,0.0,0.0
+Curricular units 2nd sem (credited),std,2.02,1.68
+Curricular units 2nd sem (enrolled),mean,6.45,5.78
+Curricular units 2nd sem (enrolled),median,6.0,6.0
+Curricular units 2nd sem (enrolled),std,2.2,2.11
+Curricular units 2nd sem (evaluations),mean,8.48,7.17
+Curricular units 2nd sem (evaluations),median,8.0,7.0
+Curricular units 2nd sem (evaluations),std,3.38,4.82
+Curricular units 2nd sem (approved),mean,5.62,1.94
+Curricular units 2nd sem (approved),median,6.0,0.0
+Curricular units 2nd sem (approved),std,2.43,2.57
+Curricular units 2nd sem (grade),mean,12.28,5.9
+Curricular units 2nd sem (grade),median,12.75,0.0
+Curricular units 2nd sem (grade),std,3.04,6.12
+Curricular units 2nd sem (without evaluations),mean,0.11,0.24
+Curricular units 2nd sem (without evaluations),median,0.0,0.0
+Curricular units 2nd sem (without evaluations),std,0.6,0.99
+Unemployment rate,mean,11.54,11.62
+Unemployment rate,median,11.1,11.1
+Unemployment rate,std,2.61,2.77
+Inflation rate,mean,1.2,1.28
+Inflation rate,median,1.4,1.4
+Inflation rate,std,1.37,1.4
+GDP,mean,0.07,-0.15
+GDP,median,0.79,0.32
+GDP,std,2.28,2.25
