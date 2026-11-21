@@ -85,3 +85,52 @@ def spearman_heatmap(df, cols, name="fig_05_correlacion_spearman"):
                 ax=ax, cbar_kws={"label": "rho de Spearman"})
     fig.tight_layout()
     return _save(fig, name)
+
+
+# ---------------------------------------------------------------- Fase 4
+STRAT_COLORS = {"sin balanceo": "#8C8C8C", "SMOTE-NC": "#C44E52", "ponderación": "#4C72B0"}
+
+
+def strategy_comparison(summary, moment="semestre_2", feature_set="completo",
+                        name="fig_06_estrategias_balanceo"):
+    """Sensibilidad, precisión y AUC-ROC de cada modelo según la estrategia de balanceo."""
+    import numpy as np
+    t = summary.query("momento == @moment and conjunto == @feature_set")
+    models = list(dict.fromkeys(t["modelo"]))
+    strategies = list(dict.fromkeys(t["estrategia"]))
+    metrics = [("sensibilidad", "Sensibilidad"), ("precision", "Precisión"), ("auc_roc", "AUC-ROC")]
+    fig, axes = plt.subplots(1, 3, figsize=(13, 4), sharey=True)
+    x = np.arange(len(models))
+    w = 0.8 / len(strategies)
+    for ax, (m, title) in zip(axes, metrics):
+        for i, st in enumerate(strategies):
+            r = t[t["estrategia"] == st].set_index("modelo").reindex(models)
+            ax.bar(x + (i - (len(strategies) - 1) / 2) * w, r[f"{m}_media"], w,
+                   yerr=r[f"{m}_de"], capsize=2, color=STRAT_COLORS.get(st), label=st)
+        ax.set_xticks(x, models, rotation=30, ha="right", fontsize=8)
+        ax.set_title(title, fontsize=10)
+        ax.set_ylim(0.5, 1.0)
+        ax.spines[["top", "right"]].set_visible(False)
+    axes[0].set_ylabel("Media en validación cruzada")
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="lower center", ncol=len(strategies), frameon=False, fontsize=9)
+    fig.tight_layout(rect=(0, 0.07, 1, 1))
+    return _save(fig, name)
+
+
+def moments_comparison(summary, feature_set="completo", name="fig_07_auc_por_momento"):
+    """AUC-ROC de cada modelo en los tres momentos de predicción (mejor estrategia de cada uno)."""
+    t = summary.query("conjunto == @feature_set")
+    best = t.loc[t.groupby(["momento", "modelo"], sort=False)["auc_roc_media"].idxmax()]
+    order = list(config.MOMENTS)
+    labels = {"matricula": "Matrícula", "semestre_1": "Cierre 1.er sem.", "semestre_2": "Cierre 2.º sem."}
+    fig, ax = plt.subplots(figsize=(7, 4))
+    for mod, g in best.groupby("modelo", sort=False):
+        g = g.set_index("momento").reindex(order)
+        ax.errorbar([labels[m] for m in order], g["auc_roc_media"], yerr=g["auc_roc_de"],
+                    marker="o", capsize=3, label=mod)
+    ax.set_ylabel("AUC-ROC (media en validación cruzada)")
+    ax.legend(frameon=False, fontsize=8)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    return _save(fig, name)
