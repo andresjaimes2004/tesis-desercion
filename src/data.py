@@ -29,11 +29,14 @@ def binarize_target(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def features_for_moment(df: pd.DataFrame, moment: str) -> list[str]:
-    """Columnas predictoras disponibles en cada momento de predicción."""
+def features_for_moment(df: pd.DataFrame, moment: str, exclude=()) -> list[str]:
+    """Columnas predictoras disponibles en cada momento de predicción.
+
+    exclude: variables que se dejan por fuera (por ejemplo, las no significativas).
+    """
     if moment not in config.MOMENTS:
         raise ValueError(f"Momento no válido: {moment}. Opciones: {config.MOMENTS}")
-    excluded = {config.TARGET_COL, config.BINARY_TARGET}
+    excluded = {config.TARGET_COL, config.BINARY_TARGET, *exclude}
     cols = [c for c in df.columns if c not in excluded]
     if moment == "matricula":
         return [c for c in cols if not c.startswith((config.SEM1_PREFIX, config.SEM2_PREFIX))]
