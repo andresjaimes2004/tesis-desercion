@@ -1,0 +1,12 @@
+﻿semestre,regla,incumplimientos
+1.er semestre,Unidades aprobadas mayores que las inscritas,0
+1.er semestre,Nota promedio fuera de la escala 0 a 20,0
+1.er semestre,Nota promedio mayor que cero sin unidades aprobadas,0
+1.er semestre,Unidades aprobadas sin nota promedio,0
+2.º semestre,Unidades aprobadas mayores que las inscritas,0
+2.º semestre,Nota promedio fuera de la escala 0 a 20,0
+2.º semestre,Nota promedio mayor que cero sin unidades aprobadas,0
+2.º semestre,Unidades aprobadas sin nota promedio,0
+matrícula,"Edad al ingresar fuera de [15, 80]",0
+matrícula,"Puntaje de admisión fuera de [0, 200]",0
+matrícula,"Nota de la formación previa fuera de [0, 200]",0
