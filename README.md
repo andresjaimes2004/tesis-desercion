@@ -39,7 +39,7 @@ y tablero en Power BI. Metodología: CRISP-DM.
 
 ## Reproducibilidad
 
-- Versiones fijadas en `requirements.txt`.
+- Versiones mínimas en `requirements.txt; las exactas usadas quedan en requirements-lock.txt`.
 - Semilla global `SEED = 42` en `src/config.py`.
 - El conjunto de prueba (20 %, estratificado) se separa al inicio y no se usa hasta la evaluación final.
 - El balanceo de clases se aplica solo dentro de cada partición de entrenamiento.
