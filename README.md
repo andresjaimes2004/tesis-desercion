@@ -39,7 +39,7 @@ y tablero en Power BI. Metodología: CRISP-DM.
 
 ## Reproducibilidad
 
-- Versiones mínimas en `requirements.txt; las exactas usadas quedan en requirements-lock.txt`.
+- Versiones mínimas en `requirements.txt`; las exactas usadas quedan en `requirements-lock.txt`.
 - Semilla global `SEED = 42` en `src/config.py`.
 - El conjunto de prueba (20 %, estratificado) se separa al inicio y no se usa hasta la evaluación final.
 - El balanceo de clases se aplica solo dentro de cada partición de entrenamiento.
@@ -47,4 +47,4 @@ y tablero en Power BI. Metodología: CRISP-DM.
 ## Licencia de los datos
 
 Conjunto de datos *Predict Students' Dropout and Academic Success*, UCI Machine Learning Repository,
-https://doi.org/10.24432/C5MC89 — Licencia CC BY 4.0. Citar con los creadores tal como figuran en esa página.
+https://doi.org/10.24432/C5MC89 — Licencia CC BY 4.0.
