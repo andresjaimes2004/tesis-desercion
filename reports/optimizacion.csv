@@ -1,0 +1,5 @@
+﻿modelo,auc_cv,auc_de,auc_ee,combinaciones,variables,mejores_parametros
+XGBoost,0.9206371600157828,0.004824227102163941,0.0021574599478670787,40,31,"{""colsample_bytree"": 0.6955303037866204, ""learning_rate"": 0.018585951462501547, ""max_depth"": 5, ""min_child_weight"": 2, ""n_estimators"": 489, ""reg_lambda"": 0.26054534945804003, ""scale_pos_weight"": 2.1125769569041335, ""subsample"": 0.6739417822102108}"
+SVM,0.9176431010747322,0.005412039746381334,0.0024203377539678767,20,31,"{""C"": 9.717775305059629, ""class_weight"": ""balanced"", ""gamma"": 0.0018856783874794994}"
+Regresión logística,0.9172137086914359,0.008623892601910849,0.003856722017706038,22,31,"{""C"": 0.31622776601683794, ""class_weight"": null}"
+Random Forest,0.9159812583722854,0.006122468654985911,0.0027380512205320406,30,31,"{""n_estimators"": 300, ""min_samples_leaf"": 1, ""max_features"": ""sqrt"", ""max_depth"": 15, ""class_weight"": ""balanced""}"

@@ -1,0 +1,32 @@
+﻿variable,etiqueta,importancia_shap
+Curricular units 2nd sem (approved),"Unidades aprobadas, 2.º sem.",1.0965754
+Tuition fees up to date,Matrícula al día,0.40375033
+Curricular units 1st sem (approved),"Unidades aprobadas, 1.er sem.",0.35265997
+Age at enrollment,Edad al ingresar,0.29084417
+Curricular units 2nd sem (grade),"Nota promedio, 2.º sem.",0.26180044
+Course,Programa académico,0.1927118
+Curricular units 2nd sem (enrolled),"Unidades inscritas, 2.º sem.",0.15113263
+Scholarship holder,Becario,0.13406463
+Gender,Género,0.10875532
+Debtor,Deudor,0.10641066
+Admission grade,Puntaje de admisión,0.10121989
+Curricular units 1st sem (enrolled),"Unidades inscritas, 1.er sem.",0.09954073
+Mother's qualification,Formación de la madre,0.099362
+Application mode,Modalidad de ingreso,0.098869175
+Father's occupation,Ocupación del padre,0.09570042
+Curricular units 1st sem (grade),"Nota promedio, 1.er sem.",0.09408559
+Curricular units 2nd sem (evaluations),"Evaluaciones, 2.º sem.",0.09390505
+Previous qualification (grade),Nota de la formación previa,0.09017055
+Mother's occupation,Ocupación de la madre,0.083868496
+GDP,PIB,0.07096331
+Application order,Orden de preferencia,0.06016475
+Father's qualification,Formación del padre,0.05896627
+Displaced,Desplazado,0.052331023
+Curricular units 1st sem (evaluations),"Evaluaciones, 1.er sem.",0.04664167
+Marital Status,Estado civil,0.01890704
+Previous qualification,Formación previa,0.018544994
+Curricular units 1st sem (without evaluations),"Unidades sin evaluación, 1.er sem.",0.016368195
+Curricular units 1st sem (sin inscripcion),"Sin unidades inscritas, 1.er sem.",0.012695862
+Curricular units 2nd sem (without evaluations),"Unidades sin evaluación, 2.º sem.",0.004271759
+Daytime/evening attendance,Jornada diurna,0.0030798642
+Curricular units 2nd sem (sin inscripcion),"Sin unidades inscritas, 2.º sem.",0.0030699053

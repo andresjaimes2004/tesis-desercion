@@ -1,0 +1,4 @@
+﻿criterio,valor,cumple
+"Sensibilidad ≥ 0,80",0.8450704225352113,True
+"Precisión ≥ 0,70",0.7792207792207793,True
+"Brier < 0,218",0.09041045826181948,True
