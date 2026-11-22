@@ -18,7 +18,7 @@ y tablero en Power BI. Metodología: CRISP-DM.
 | `src/` | Funciones reutilizables (configuración, carga, utilidades) | Todas |
 | `models/` | Modelo final serializado | Modelado / Evaluación |
 | `reports/figures/` | Figuras que van al documento | Todas |
-| `powerbi/` | Archivo .pbix y CSV de entrada | Despliegue |
+| `powerbi/` | Tablero (.pbix), su exportación en PDF y Excel de entrada | Despliegue |
 
 ## Cuadernos
 
