@@ -134,3 +134,98 @@ def moments_comparison(summary, feature_set="completo", name="fig_07_auc_por_mom
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
     return _save(fig, name)
+
+
+# ---------------------------------------------------------------- Fase 5
+def roc_calibration(y, p, label, name="fig_08_roc_calibracion"):
+    """Curva ROC y curva de calibración del modelo final en el conjunto de prueba."""
+    from sklearn.calibration import calibration_curve
+    from sklearn.metrics import roc_auc_score, roc_curve
+    fpr, tpr, _ = roc_curve(y, p)
+    frac, mean = calibration_curve(y, p, n_bins=10, strategy="quantile")
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))
+    axes[0].plot(fpr, tpr, color="#C44E52", label=f"{label} (AUC = {roc_auc_score(y, p):.3f})".replace(".", ","))
+    axes[0].plot([0, 1], [0, 1], "--", color="#8C8C8C", label="Azar")
+    axes[0].set_xlabel("Tasa de falsos positivos (1 − especificidad)")
+    axes[0].set_ylabel("Sensibilidad")
+    axes[0].set_title("Curva ROC")
+    axes[1].plot(mean, frac, "o-", color="#4C72B0", label=label)
+    axes[1].plot([0, 1], [0, 1], "--", color="#8C8C8C", label="Calibración perfecta")
+    axes[1].set_xlabel("Probabilidad predicha (media por grupo)")
+    axes[1].set_ylabel("Proporción observada de deserción")
+    axes[1].set_title("Curva de calibración")
+    for ax in axes:
+        ax.legend(frameon=False, fontsize=8, loc="lower right")
+        ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    return _save(fig, name)
+
+
+def confusion(m, name="fig_09_matriz_confusion"):
+    """Matriz de confusión en el conjunto de prueba con el umbral elegido."""
+    import numpy as np
+    mat = np.array([[m["vn"], m["fp"]], [m["fn"], m["vp"]]]).astype(int)
+    fig, ax = plt.subplots(figsize=(4.6, 3.8))
+    sns.heatmap(mat, annot=True, fmt="d", cmap="Blues", cbar=False, ax=ax,
+                xticklabels=["No deserta", "Deserta"], yticklabels=["No deserta", "Deserta"])
+    ax.set_xlabel("Predicción del modelo")
+    ax.set_ylabel("Resultado real")
+    fig.tight_layout()
+    return _save(fig, name)
+
+
+def shap_global(importance, top=15, name="fig_10_shap_importancia"):
+    t = importance.head(top).iloc[::-1]
+    fig, ax = plt.subplots(figsize=(8, 0.38 * len(t) + 1))
+    ax.barh(t["etiqueta"], t["importancia_shap"], color="#C44E52")
+    ax.set_xlabel("Importancia SHAP (media del valor absoluto)")
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    return _save(fig, name)
+
+
+_SHAP_ES = [("Sum of ", "Suma de "), (" other features", " variables restantes"),
+            ("Feature value", "Valor de la variable"), ("High", "Alto"), ("Low", "Bajo")]
+
+
+def _spanish(fig):
+    """Traduce los textos fijos que dibuja la librería SHAP."""
+    def tr(t):
+        for a, b in _SHAP_ES:
+            t = t.replace(a, b)
+        return t
+    for ax in fig.axes:
+        ax.set_yticklabels([tr(t.get_text()) for t in ax.get_yticklabels()])
+        ax.set_ylabel(tr(ax.get_ylabel()))
+        for t in ax.texts:
+            t.set_text(tr(t.get_text()))
+
+
+def shap_beeswarm(exp, labels, top=15, name="fig_11_shap_beeswarm"):
+    import shap
+    e = exp.__copy__() if hasattr(exp, "__copy__") else exp
+    e.feature_names = labels
+    plt.figure()
+    shap.plots.beeswarm(e, max_display=top, show=False)
+    fig = plt.gcf()
+    fig.set_size_inches(8, 0.38 * top + 1.5)
+    fig.axes[0].set_xlabel("Valor SHAP (aporte al riesgo de deserción)")
+    _spanish(fig)
+    fig.tight_layout()
+    return _save(fig, name)
+
+
+def shap_case(exp_row, labels, name, raw_values=None):
+    """Explicación de un estudiante. raw_values: valores originales (sin escalar) para mostrar."""
+    import shap
+    e = exp_row
+    e.feature_names = labels
+    if raw_values is not None:
+        e.display_data = raw_values
+    plt.figure()
+    shap.plots.waterfall(e, max_display=10, show=False)
+    fig = plt.gcf()
+    fig.set_size_inches(8, 5)
+    _spanish(fig)
+    fig.tight_layout()
+    return _save(fig, name)
