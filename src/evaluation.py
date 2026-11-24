@@ -142,7 +142,7 @@ def bootstrap_ci(y, p, threshold, n=1000, seed=config.SEED):
     """Intervalos de confianza del 95 % por remuestreo bootstrap de percentiles sobre la prueba."""
     rng = np.random.default_rng(seed)
     y, p = np.asarray(y), np.asarray(p)
-    keys = ["sensibilidad", "precision", "f1", "auc_roc", "brier"]
+    keys = ["exactitud", "sensibilidad", "precision", "f1", "auc_roc", "brier"]
     draws = {k: [] for k in keys}
     for _ in range(n):
         i = rng.integers(0, len(y), len(y))
